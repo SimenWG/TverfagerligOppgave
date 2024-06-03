@@ -98,3 +98,54 @@ body.hide-left,
 body.hide-right {
     transition: none; 
 }
+
+@media (max-width: 1024px) {
+    .navbar a {
+        padding: 10px 20px;
+    }
+    .arrow {
+        font-size: 2em;
+    }
+    .text-box {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar a {
+        padding: 10px 15px;
+    }
+    .background-container {
+        flex-direction: column;
+    }
+    .arrow {
+        font-size: 1.5em;
+    }
+    .text-box {
+        padding: 10px;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 5px 10px;
+    }
+    .background-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .arrow {
+        display: none;
+    }
+    .text-box {
+        padding: 5px;
+        min-width: 200px;
+    }
+    .text-box p {
+        font-size: 0.9em;
+    }
+}
