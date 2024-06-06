@@ -3,24 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1IMA</title>
+    <title>Kontakt meg</title>
     <link rel="icon" type="image/x-icon" href="../img/Viken_våpen.svg.png">
     <link rel="stylesheet" href="../css/kontakt.css">
 </head>
-<body style="background-color: #84848f;">
+<body>
     <header class="header">
         <a href="../index.html" class="logo">Året <span>2023/24</span></a>
-    
         <i class='bx bx-menu' id="menu-icon"></i>
-    
         <nav class="navbar">
           <a href="../index.html">Hjem</a>
           <a href="programmering.html">Programmering</a>
-          <a class="active" href="#">Teknologiforståelse</a>
+          <a href="teknologi.html">Teknologiforståelse</a>
           <a href="medie.html">Medieproduksjon</a>
           <a href="YFF.html">YFF</a>
         </nav>
-      </header>
+    </header>
 
+    <div class="contact-container">
+        <img src="../img/Viken_våpen.svg.png" alt="Logo" class="logo-img" id="logo">
+        <div class="contact-info">
+            <h1 id="contact-title"></h1>
+            <p id="contact-address"></p>
+            <p>Telefonnummer: <span id="phone-number">+47 31 29 22 00</span></p>
+        </div>
+        <form id="contact-form">
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Melding:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <footer>
+            <p>&copy; 2024</p>
+        </footer>
+    </div>
+
+    <div id="call-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Vil du ringe +47 31 29 22 00?</p>
+            <button id="confirm-call">Ja</button>
+            <button id="cancel-call">Nei</button>
+        </div>
+    </div>
+
+    <button id="back-to-top" title="Tilbake til toppen">↑</button>
+
+    <script src="../js/kontakt.js"></script>
 </body>
 </html>

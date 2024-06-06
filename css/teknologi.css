@@ -181,3 +181,48 @@
 .styled-button a:hover {
     text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --text-color: #ECECEC;
+        --background-color: #84848f;
+        --sec-background-color: #101010;
+        --main-color: #0066cc;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 2rem 6%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+        margin-left: 2rem;
+    }
+
+    #menu-icon {
+        font-size: 2.6rem;
+    }
+
+    .background-container,
+    .languages,
+    .oppgaver,
+    .eksempler {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language,
+    .oppgave,
+    .eksempel {
+        width: 80%;
+        font-size: 1.6rem;
+    }
+}

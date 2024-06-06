@@ -8,77 +8,76 @@
     border: none;
     outline: none;
     font-family: "Reddit Mono", sans-serif;
-  }
+}
   
-  :root {
+:root {
     --text-color: #ECECEC;
     --background-color: #84848f;
     --sec-background-color: #101010;
     --main-color: #0066cc;
-  }
+}
   
-  html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  }
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
   
-  body {
-  background: var(--background-color);
-  color: var(--text-color);
-  }
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
   
-  .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 3rem 9%;
-  background: rgba( 0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 100;
-  }
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
   
-  .logo {
-  font-size: 3rem;
-  color: var(--text-color);
-  font-weight: 800;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  }
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
   
-  .logo:hover {
-  transform: scale(1.1);
-  }
+.logo:hover {
+    transform: scale(1.1);
+}
   
-  .logo span {
-  text-shadow: 0 0 20px var(--main-color);
-  }
+.logo span {
+    text-shadow: 0 0 20px var(--main-color);
+}
   
-  .navbar a{
-  font-size: 1.8rem;
-  color: var(--text-color);
-  margin-left: 4rem;
-  font-weight: 500;
-  transition: 0.3s ease;
-  border-bottom: 3px solid transparent;
-  }
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
   
-  .navbar a:hover,
-  .navbar a.active {
-  color: var(--main-color);
-  border-bottom: 3px solid var(--main-color);
-  }
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
   
-  #menu-icon {
-  font-size: 3.6rem;
-  color: var(--main-color);
-  display: none;
-  }
-
-
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+  
 .background-container {
     position: fixed;
     top: 50%;
@@ -193,8 +192,26 @@
     text-decoration: none;
 }
 
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: #0066cc;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
 @media only screen and (max-width: 480px) {
-   
     h1 {
         margin-top: 20px;
     }
@@ -213,7 +230,6 @@
 }
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-  
     h1 {
         margin-top: 20px;
     }
@@ -232,7 +248,6 @@
 }
 
 @media only screen and (min-width: 1025px) {
-   
     .background-container {
         max-width: 600px;
     }
