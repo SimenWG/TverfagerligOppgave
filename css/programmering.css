@@ -1,48 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
 
 * {
-    font-family: "Reddit Mono", monospace;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
     padding: 0;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-    overflow: scroll;
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #414142;
-    padding: 10px;
-}
-
-.navbar a {
-    color: #ababab;
+    margin: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    padding: 15px 35px;
-    text-align: center;
-    transition: .3s ease-in-out;
-}
+    border: none;
+    outline: none;
+    font-family: "Reddit Mono", sans-serif;
+  }
+  
+  :root {
+    --text-color: #ECECEC;
+    --background-color: #84848f;
+    --sec-background-color: #101010;
+    --main-color: #0066cc;
+  }
+  
+  html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  }
+  
+  body {
+  background: var(--background-color);
+  color: var(--text-color);
+  }
+  
+  .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem 9%;
+  background: rgba( 0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  }
+  
+  .logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+  transform: scale(1.1);
+  }
+  
+  .logo span {
+  text-shadow: 0 0 20px var(--main-color);
+  }
+  
+  .navbar a{
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  }
+  
+  #menu-icon {
+  font-size: 3.6rem;
+  color: var(--main-color);
+  display: none;
+  }
 
-.active {
-    border-bottom: 2px solid #0066cc;
-    color: #fff;
-}
 
-.navbar img {
-    height: auto;
-    width: 40px;
-    margin-right: 50px; 
-}
-
-.navbar a:hover {
-    border-bottom: 2px solid #0066cc;
-    color: #fff;
+.background-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    justify-content: space-between;
 }
 
 .background-container {
@@ -116,7 +162,7 @@ body {
     padding: 20px;
     width: 30%;
     box-sizing: border-box;
-    margin: 10px;
+    margin-top: 20px;
     text-align: center;
 }
 .eksempel img {
@@ -147,53 +193,55 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 1024px) {
-    .navbar a {
-        padding: 10px 20px;
+@media only screen and (max-width: 480px) {
+   
+    h1 {
+        margin-top: 20px;
     }
-    .arrow {
-        font-size: 2em;
-    }
-    .text-box {
-        padding: 15px;
-    }
-}
 
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
-    .navbar a {
-        padding: 10px 15px;
-    }
     .background-container {
-        flex-direction: column;
+        max-width: 100%;
     }
-    .arrow {
-        font-size: 1.5em;
-    }
-    .text-box {
-        padding: 10px;
-        min-width: 250px;
-    }
-}
 
-@media (max-width: 480px) {
-    .navbar a {
-        padding: 5px 10px;
-    }
-    .background-container {
-        flex-direction: column;
+    .language, .oppgave, .eksempel {
         width: 100%;
     }
-    .arrow {
-        display: none;
+
+    .navbar a {
+        margin-left: 2rem;
     }
-    .text-box {
-        padding: 5px;
-        min-width: 200px;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  
+    h1 {
+        margin-top: 20px;
     }
-    .text-box p {
-        font-size: 0.9em;
+
+    .background-container {
+        max-width: 100%;
+    }
+
+    .language, .oppgave, .eksempel {
+        width: 100%;
+    }
+
+    .navbar a {
+        margin-left: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+   
+    .background-container {
+        max-width: 600px;
+    }
+
+    .language, .oppgave, .eksempel {
+        width: 30%;
+    }
+
+    .navbar a {
+        margin-left: 4rem;
     }
 }

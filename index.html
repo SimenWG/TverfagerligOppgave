@@ -6,31 +6,35 @@
     <title>1IMA</title>
     <link rel="icon" type="image/x-icon" href="img/Viken_våpen.svg.png">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body style="background-image: url('https://afk.no/handlers/bv.ashx/i1b1e98c8-ed16-4448-a999-cec41a5e19d7/w1920/h1080/q203474/ka7140f124228/ika_mariannewahlberg_h-98.jpg');">
-    <div class="navbar">
-        <a class="active" href="#">Hjem</a>
-        <a href="html/programmering.html">Programmering</a>
-        <a href="html/YFF.html">YFF</a>
-        <a href="html/medie.html">Medieproduksjon</a>
-        <a href="html/teknologi.html">Teknologiforståelse</a>
-        <a href="html/kontakt.html">Kontakt</a>
-    </div>
+<body style="background-color: #84848f;">
+    <header class="header">
+        <a href="#" class="logo">Året <span>2023/24</span></a>
+    
+        <i class='bx bx-menu' id="menu-icon"></i>
+    
+        <nav class="navbar">
+          <a class="active" href="#">Hjem</a>
+          <a href="./html/programmering.html">Programmering</a>
+          <a href="./html/teknologi.html">Teknologiforståelse</a>
+          <a href="./html/medie.html">Medieproduksjon</a>
+          <a href="./html/YFF.html">YFF</a>
+        </nav>
+      </header>
     <div class="background-container">
         <span class="arrow" onclick="previousImage()">&#9664;</span>
         <div class="text-box">
             <h1 id="title">Røyken VGS</h1>
             <p id="subtitle" style="padding: 10px;">Informasjonsteknologi & Medieproduksjon</p>
-            <button style="margin-top: 20px; background-color:rgba(49, 49, 49, 0.6); padding: 20px; border-radius: 15px;">
-                <a href="https://vilbli.no" style="text-decoration: none; color: white; font-size: 15px; font-weight: bold; letter-spacing: 1px; ">Hva kan du jobbe som?</a>
-            </button>
-            </button>
+            <button class="styled-button"><a href="./html/kontakt.html">Kontakt meg</a></button>
         </div>
         <span class="arrow" onclick="nextImage()">&#9654;</span>
     </div>
     <div class="content"> 
         <p></p>
     </div>
+
 
     <script src="js/index.js"></script>
 </body>
